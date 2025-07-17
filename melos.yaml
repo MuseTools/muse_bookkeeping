@@ -1,0 +1,19 @@
+name: muse_bookkeeping_workspace
+
+repository:
+  type: github
+  origin: https://github.com
+  owner: MuseTools
+  name: muse_bookkeeping
+
+packages:
+  - "apps/**"
+  - "packages/**"
+
+command:
+  version:
+    workspaceChangelog: false
+
+scripts:
+  analyze:
+    exec: dart analyze .
