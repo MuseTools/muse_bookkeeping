@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bookkeeper/features/home_page.dart';
-import 'package:bookkeeper/shared/mu_route.dart';
+import 'package:bookkeeper/shared/app_route.dart';
 import 'package:bookkeeper/shared/styles.dart';
 import 'package:bookkeeper/shared/types.dart';
 import 'package:muse_ui/button/muse_button.dart';
@@ -32,7 +32,7 @@ Widget _buildBtn(String title, VoidCallback? onClick) {
 
 List<DemoList> mockIndex(BuildContext context) {
   VoidCallback? goTo(String title, List<DemoList> list, {double? padding}) {
-    return () => MuRoute.push(
+    return () => AppRoute.push(
       context,
       HomePage(title: title, list: list, padding: padding),
     );
